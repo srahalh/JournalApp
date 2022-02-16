@@ -36,6 +36,14 @@
     }
 }
 
+.btn-danger{
+    color: white;
+    background-color: red;
+    transition: ease-in-out .3s all;
+    &:hover{
+        background-color: darken($color: red, $amount: 10);
+    }
+}
 .btn-text {
     color: $white;
     font-size: 14px;

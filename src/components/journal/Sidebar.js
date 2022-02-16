@@ -17,7 +17,7 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="jounal__sidebar">
+    <aside className="jounal__sidebar animate__animated animate__fadeIn animate__faster">
       <div className="jounal__sidebar-navbar">
         <h3 className="mt-5">
           <i className="far fa-sun"></i>
