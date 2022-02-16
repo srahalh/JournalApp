@@ -1,18 +1,25 @@
-import React from 'react'
-import { NoteScreen } from '../notes/NoteScreen'
-// import { NothingSelected } from './NothingSelected'
-import Sidebar from './Sidebar'
+import React from "react";
+import { NoteScreen} from "../notes/NoteScreen";
+import {NothingSelected} from "../journal/NothingSelected"
+import Sidebar from "./Sidebar";
+import { useSelector } from "react-redux";
 
 export const JournalScreen = () => {
-    return (
-        <div className="jounal__main-content">
-            <Sidebar />
+  const { active } = useSelector((state) => state.notes);
 
-            <main>
-                {/* <NothingSelected/> */}
-                <NoteScreen/>
-            </main>
-        </div>
-            
-    )
-}
+  return (
+    <div className="jounal__main-content">
+      <Sidebar />
+
+      <main>
+        {
+            (active)
+            ? (<NoteScreen />)
+            : (<NothingSelected />)
+        
+        }
+        
+      </main>
+    </div>
+  );
+};
